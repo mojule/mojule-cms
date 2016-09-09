@@ -18,6 +18,10 @@ jsconfig.json
 tsd.json
 typings
 
+#client js
+files/js/cms.js
+files/js/cms.min.js
+
 # Logs
 *.log
 
