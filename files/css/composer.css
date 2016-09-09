@@ -6,6 +6,10 @@
   outline: 2px ridge #39f;
 }
 
+.page [data-component].selected .row[data-node] {
+  outline: 2px ridge #39f;
+}
+
 .page [data-container] {
   min-height: 66px;
   padding: 0.25rem;
