@@ -6,6 +6,10 @@
   outline: 2px ridge #39f;
 }
 
+.page [data-component] .row[data-node] {
+  outline: 2px ridge rgba( 255, 255, 255, 0.33 );
+}
+
 .page [data-component].selected .row[data-node] {
   outline: 2px ridge #39f;
 }
