@@ -1,5 +1,3 @@
-# warning - this is a pre-test commit to GitHub - it may not work as described below - this message will be removed once testing is complete
-
 # mojule
 
 Web page builder + CMS (prototype)
@@ -76,8 +74,9 @@ probably be done automatically, now that I think about it
 
 ### And then...
 
-You should have node 6.3.0 or newer, as well as browserify and grunt installed
-globally
+You should have node 6 or newer, as well as browserify and grunt installed
+globally (and that should be all - however, I have yet to test from a clean
+environment - will update if I learn otherwise)
 
 `npm install` in the root folder.
 
