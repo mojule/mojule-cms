@@ -9,6 +9,10 @@ This prototype contains some of what we intend to be in the final product and is
 stable enough that we are using it in production for client sites, but is
 missing many planned features, lacking in niceties in many places etc.
 
+## Documentation
+
+We're still lacking much in the way of documentation etc. - this will be coming
+
 ## Currently supports
 
  - Creating and managing multiple sites, pages etc.
