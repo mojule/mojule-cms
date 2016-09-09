@@ -1,0 +1,12 @@
+<ul class="inline-list">
+{{#isLoggedIn}}
+  <li>{{email}}</li>
+  <li><a href="{{changePasswordUrl}}">Change Password</a></li>
+  <li><a href="{{logoutUrl}}">Log Out</a></li>
+{{/isLoggedIn}}
+{{^isLoggedIn}}
+  <li><a href="{{loginUrl}}">Login</a></li>
+  <li><a href="{{registerUrl}}">Register</a></li>
+  <li><a href="{{forgotUrl}}">Forgot Password</a></li>
+{{/isLoggedIn}}
+</ul>

@@ -1,0 +1,24 @@
+{
+  "title": "Reference",
+  "id": "reference",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Item Name",
+      "type": "string"
+    },
+    "icon": {
+      "title": "Icon Name",
+      "type": "string"
+    },
+    "_id": {
+      "title": "ID",
+      "type": "string"
+    },
+    "selected": {
+      "title": "Selected?",
+      "type": "boolean"
+    }
+  },
+  "required": [ "name", "_id" ]
+}

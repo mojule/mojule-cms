@@ -1,0 +1,8 @@
+<div class="list-builder">
+  <ol>
+    {{#items}}
+      <li data-id="{{id}}"><span>{{#icon}}<i class="fa fa-{{icon}}"></i> {{/icon}}{{title}}</span></li>
+    {{/items}}
+  </ol>
+  <a href="javascript:void(0)" class="button secondary">{{#submitLabel}}{{submitLabel}}{{/submitLabel}}{{^submitLabel}}Edit Selection{{/submitLabel}}</a>
+</div>

@@ -1,0 +1,11 @@
+{{#isTextNode}}
+  {{textContent}}
+{{/isTextNode}}
+{{^isTextNode}}
+  {{#isEmpty}}
+    <{{tagName}}{{#attributes}} {{#value}}{{key}}="{{value}}"{{/value}}{{^value}}{{key}}{{/value}}{{/attributes}} />
+  {{/isEmpty}}
+  {{^isEmpty}}
+    <{{tagName}}{{#attributes}} {{#value}}{{key}}="{{value}}"{{/value}}{{^value}}{{key}}{{/value}}{{/attributes}}>{{#childNodes}}{{> node }}{{/childNodes}}</{{tagName}}>
+  {{/isEmpty}}
+{{/isTextNode}}

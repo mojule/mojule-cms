@@ -1,0 +1,12 @@
+{
+	"sendgrid" : {
+		"apikey" : "testfile_sendgrid_apikey"
+	},
+	"recaptcha": {
+		"sitekey" : "testfile_recaptcha_sitekey",
+		"secretkey" : "testfile_recaptcha_secretkey"
+	},
+	"azure" : {
+		"appinsightskey" : "testfile_appinsightskey"
+	}
+}

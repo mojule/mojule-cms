@@ -1,0 +1,22 @@
+<ul class="tabs" data-tab>
+  <li class="tab-title active"><a href="#pages">Page</a></li>
+  <li class="tab-title"><a href="#files">Files</a></li>
+  <li class="tab-title"><a href="#url">URL</a></li>
+</ul>      
+<div class="tabs-content">
+  <div class="content active" id="pages">
+  </div>
+  <div class="content" id="files">
+  </div>
+  <div class="content" id="url">
+    <div class="row">
+      <div class="columns medium-6">
+        <label>URL</label>
+      </div>
+      <div class="columns medium-6">
+        <input type="url" name="url" value="{{url}}" />
+      </div>
+    </div>
+  </div>
+</div>          
+{{>dialog-ok-cancel}}

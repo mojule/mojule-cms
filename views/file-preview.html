@@ -1,0 +1,21 @@
+{{#filePreview}}
+<div class="file-preview">
+  <h3>{{name}}</h3>
+  
+  <ul class="actions button-group">
+  {{#actions}}
+    <li>  
+      <a href="{{url}}" class="button {{classes}}"{{#attrs}} {{key}}="{{value}}"{{/attrs}}>
+        {{{icon}}} {{text}}
+      </a>
+    </li>  
+  {{/actions}}
+  </ul>
+  
+  {{#preview}}
+  <div class="preview">
+    <a href="{{fullsizeUrl}}"><img src="{{url}}" /></a>
+  </div>
+  {{/preview}}  
+</div>
+{{/filePreview}}

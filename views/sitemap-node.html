@@ -1,0 +1,10 @@
+<ul{{#count}} class="large-block-grid-{{count}} small-block-grid-1"{{/count}}>
+	{{#children}}
+	<li{{#top}} class="top"{{/top}}>
+		<a href="{{url}}">{{name}}</a>
+		{{^leaf}}
+      {{>sitemap-node}}
+		{{/leaf}}
+	</li>
+	{{/children}}
+</ul>

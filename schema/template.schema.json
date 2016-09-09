@@ -1,0 +1,16 @@
+{
+  "title": "Prefab",
+  "id": "template",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Prefab Name",
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "$ref" : "tags"
+    }
+  },
+  "required": [ "name" ]
+}

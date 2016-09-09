@@ -1,0 +1,20 @@
+<header>
+  <div class="row full collapse top">
+    <div class="columns medium-8">
+      <h1><a href="/cms"><img src="/img/mojule-logo.svg" alt="Mojule" /> mojule</a>{{#site}} <span><i class="fa fa-globe"></i> {{site}}</span>{{/site}}</h1>
+    </div>
+    <div class="columns medium-4">
+      {{#user}}
+        <p class="text-right"><a href="/cms/users/{{id}}">{{email}}</a> | <a href="/cms/logout"><i class="fa fa-sign-out"></i> Log Out</a></p>
+      {{/user}}
+    </div>
+  </div>  
+  {{> toolbars}}
+</header>
+{{#subtitle}}
+<div class="row subtitle">
+  <div class="columns">
+    <h2><i class="fa fa-{{icon}}"></i> {{subtitle}}</h2>
+  </div>
+</div>
+{{/subtitle}}

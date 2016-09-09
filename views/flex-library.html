@@ -1,0 +1,17 @@
+{{#library}}
+  <ul class="library icon-library app-library{{#small}} small-library{{/small}}">
+    {{#items}}
+      <li{{> data-attr}} title="{{title}}"{{#selected}} class="selected" {{/selected}}>
+        {{#url}}<a href="{{url}}">{{/url}}
+          <div class="ratio">
+            <div class="content">
+              {{^image}}<i class="fa fa-{{#size}}{{size}}{{/size}}{{^size}}5{{/size}}x fa-{{icon}}{{#className}} {{className}}{{/className}}"></i>{{/image}}
+              {{#image}}<img src="{{image}}" alt="{{alt}}" data-ratio="{{ratio}}" />{{/image}}
+              <span>{{title}}</span>
+            </div>
+          </div>
+        {{#url}}</a>{{/url}}
+      </li>
+    {{/items}}
+  </ul>
+{{/library}}

@@ -1,0 +1,15 @@
+<header data-header{{#values.isLocked}} data-locked{{/values.isLocked}}>
+  <div class="row collapse fullWidth">
+    <div class="columns small-6">
+      <span><i class="fa fa-fw fa-{{icon}}"></i> <em data-title>{{name}}</em></span>
+    </div>
+    <div class="columns small-6 text-right">
+      <span data-action="toggle" data-state="up"><i class="fa fa-fw fa-chevron-up" data-key="up"></i><i class="fa fa-fw fa-chevron-down" data-key="down"></i></span>
+      {{^values.preventDelete}}
+        {{^values.fromTemplate}}
+          <span data-action="delete"><i class="fa fa-fw fa-trash"></i></span>
+        {{/values.fromTemplate}}
+      {{/values.preventDelete}}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,17 @@
+{
+  "title": "Upload File",
+  "id": "file",
+  "type": "object",
+  "properties": {
+    "file": {
+      "title": "File",
+      "type": "string",
+      "format": "file",
+      "minLength": 1
+    },
+    "tags": {
+      "$ref" : "tags"
+    }
+  },
+  "required": [ "file" ]
+}

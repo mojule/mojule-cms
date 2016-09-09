@@ -1,0 +1,10 @@
+{
+  "title": "Tags",
+  "id": "tags",
+  "type": "array",
+  "items": {
+    "type": "string",
+    "title": "Tag"
+  },
+  "minItems": 0
+}

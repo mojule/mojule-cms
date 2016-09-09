@@ -1,0 +1,19 @@
+{{#paginate}}
+<ul class="pagination">
+  {{#prevUrl}}
+  <li class="arrow"><a href="{{prevUrl}}">&laquo;</a></li>
+  {{/prevUrl}}
+  {{^prevUrl}}
+  <li class="arrow unavailable"><a href="">&laquo;</a></li>
+  {{/prevUrl}}
+  {{#pages}}
+  <li{{#isCurrent}} class="current"{{/isCurrent}}><a href="{{url}}">{{title}}</a></li>
+  {{/pages}}
+  {{#nextUrl}}
+  <li class="arrow"><a href="{{nextUrl}}">&raquo;</a></li>
+  {{/nextUrl}}
+  {{^nextUrl}}
+  <li class="arrow unavailable"><a href="">&raquo;</a></li>
+  {{/nextUrl}}
+</ul>
+{{/paginate}}

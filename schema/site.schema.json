@@ -1,0 +1,42 @@
+{
+  "title": "Site",
+  "id": "site",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Site Name",
+      "type": "string",
+      "minLength": 1
+    },
+    "urls": {
+      "title": "URLs",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "URL",
+        "format": "uri",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "claims": {
+      "title": "Custom Claims",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "Claim",
+        "minLength": 1
+      }
+    },
+    "stylesheets": {
+      "title": "Stylesheets",
+      "type": "array",
+      "items": {
+        "$ref" : "reference"
+      },
+      "format": "checklist",
+      "uniqueItems": true
+    }
+  },
+  "required": [ "name", "urls" ]
+}

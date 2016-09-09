@@ -1,0 +1,37 @@
+{
+  "title": "User",
+  "id": "user",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "User Name",
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "title": "Email",
+      "type": "string",
+      "format": "email"
+    },
+    "claims": {
+      "title": "Claims",
+      "type": "array",
+      "items": {
+        "$ref" : "reference"
+      },
+      "format": "checklist",  
+      "uniqueItems": true      
+    },    
+    "sites": {
+      "title": "Sites",
+      "type": "array",
+      "items": {
+        "$ref" : "reference"
+      },
+      "format": "checklist",  
+      "uniqueItems": true,
+      "minLength": 1
+    }
+  },
+  "required": [ "name", "email" ]
+}

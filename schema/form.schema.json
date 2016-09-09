@@ -1,0 +1,48 @@
+{
+  "title": "Form",
+  "id": "form",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Form Name",
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "title": "Email",
+      "description": "Email address that form will be sent to",
+      "type": "string",
+      "format": "email"
+    },
+    "useCaptcha": {
+      "title": "Use reCAPTCHA",
+      "description": "Use reCAPTCHA to prevent spam",
+      "type": "boolean",
+      "default": true
+    },
+    "successMessage": {
+      "title": "Success Message",
+      "type": "string",
+      "minLength": 1,
+      "format": "textarea",
+      "default": "Your message has been sent!"
+    },
+    "submitText": {
+      "title": "Submit Button Text",
+      "type": "string",
+      "minLength": 1,
+      "default": "Submit"
+    },
+    "formType": {
+      "title": "Form Type",
+      "type": "string",
+      "format": "hidden",
+      "default": "email",
+      "enum": [ "email" ]
+    },
+    "tags": {
+      "$ref" : "tags"
+    }
+  },
+  "required": [ "name", "email", "successMessage", "submitText", "formType" ]
+}

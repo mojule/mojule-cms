@@ -1,0 +1,41 @@
+.top {
+  background: #444;
+  color: #fafafa;
+  margin-bottom: 1em;
+}
+
+.top h1 {
+  color: #fafafa;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0.125em;
+  padding-left: 0.25em;
+}
+
+.top h1 a {
+  color: #fafafa;
+}
+
+.top h1 img {
+  height: 1em;
+  width: auto;
+  position: relative;
+  top: -0.125em;
+}
+
+.top h1 span {
+  color: #f6f6f6;
+  display: inline-block;
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+  border-left: 1px solid #666;
+}
+
+.top p {
+  padding: 0.5em;
+}
+
+.top a {
+  color: #6cf;
+}

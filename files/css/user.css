@@ -1,0 +1,13 @@
+.red {
+  color: red;
+}
+
+.blue-corners {
+  border: 1px solid #39f;
+  border-radius: 1em;
+}
+
+.dark {
+  background: black;
+  color: white;
+}

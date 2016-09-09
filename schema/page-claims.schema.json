@@ -1,0 +1,28 @@
+{
+  "title": "Page Claims",
+  "id": "pageClaims",
+  "type": "object",
+  "properties": {
+    "restrict": {
+      "title": "Restrict Editing",
+      "description": "Restrict Editing to these Pages",
+      "type": "boolean",
+      "format": "checkbox"
+    },
+    "pages": {
+      "title": "Pages",
+      "type": "array",
+      "items": {
+        "$ref" : "reference"
+      },
+      "format": "checklist",
+      "uniqueItems": true
+    },
+    "components": {
+      "title": "Components",
+      "type": "string",
+      "format": "hidden"
+    }
+  },
+  "required": [ "pages" ]
+}

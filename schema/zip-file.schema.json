@@ -1,0 +1,14 @@
+{
+  "title": "Upload ZIP File",
+  "id": "zipFile",
+  "type": "object",
+  "properties": {
+    "file": {
+      "title": "ZIP File",
+      "type": "string",
+      "format": "zip-file",
+      "minLength": 1
+    }
+  },
+  "required": [ "file" ]
+}

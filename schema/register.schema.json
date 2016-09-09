@@ -1,0 +1,60 @@
+{
+  "title": "Registration Form",
+  "id": "register",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Form Name",
+      "type": "string",
+      "minLength": 1,
+      "default": "Register"
+    },
+    "useCaptcha": {
+      "title": "Use reCAPTCHA",
+      "description": "Use reCAPTCHA to prevent spam",
+      "type": "boolean",
+      "default": true
+    },
+    "claims": {
+      "title": "Claims",
+      "description": "Give new users these claims",
+      "type": "array",
+      "items": {
+        "$ref" : "reference"
+      },
+      "format": "checklist",
+      "uniqueItems": true
+    },
+    "successMessage": {
+      "title": "Success Message",
+      "type": "string",
+      "minLength": 1,
+      "format": "textarea",
+      "default": "User account has been created - please check your email."
+    },
+    "loginPage": {
+      "title": "Login Page",
+      "$ref": "reference",
+      "format": "selectlist"
+    },
+    "registerPage": {
+      "title": "Register Page",
+      "$ref": "reference",
+      "format": "selectlist"
+    },
+    "submitText": {
+      "title": "Submit Button Text",
+      "type": "string",
+      "minLength": 1,
+      "default": "Register"
+    },
+    "formType": {
+      "title": "Form Type",
+      "type": "string",
+      "format": "hidden",
+      "default": "register",
+      "enum": [ "register" ]
+    }
+  },
+  "required": [ "name", "claims", "successMessage", "loginPage", "registerPage", "submitText", "formType" ]
+}

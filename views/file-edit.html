@@ -1,0 +1,19 @@
+{{> ui-header }}
+{{#success}}
+<div class="row">
+  <div class="columns">
+    <div data-alert class="alert-box success">
+      {{success}}
+      <a href="#" class="close">&times;</a>
+    </div>
+  </div>
+</div>
+{{/success}}
+<div class="row">
+  <div class="columns medium-6">
+    {{> file-preview}}
+  </div>
+  <div class="columns medium-6">
+    {{> form}}
+  </div>
+</div>

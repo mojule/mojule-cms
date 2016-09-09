@@ -1,0 +1,8 @@
+<div>
+  <ul class="tabs" data-tab>
+    {{#children}}
+      <li class="tab-title{{#values.active}} active{{/values.active}}"><a href="#{{_id}}">{{values.title}}</a></li>
+    {{/children}}
+  </ul>
+  <div class="tabs-content" data-container></div>
+</div>

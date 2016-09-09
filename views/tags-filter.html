@@ -1,0 +1,7 @@
+<ul class="inline-list filter-tags">
+  {{#tags}}
+    <li data-tag="{{value}}"{{#selected}} class="selected"{{/selected}}>
+      <span><i class="fa{{^isTrash}} fa-tag{{/isTrash}}{{#isTrash}} fa-trash{{/isTrash}}"></i> <span>{{value}}</span></span>
+    </li>
+  {{/tags}}
+</ul>

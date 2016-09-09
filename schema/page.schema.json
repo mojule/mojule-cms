@@ -1,0 +1,54 @@
+{
+  "title": "Page",
+  "id": "page",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Page Name",
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "title": "URL Slug",
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "minLength": 1
+    },
+    "order": {
+      "title": "Navigation Order",
+      "type": "integer",
+      "default": 0
+    },
+    "excludeFromNavigation": {
+      "title": "Exclude From Navigation",
+      "type": "boolean"
+    },
+    "parent": {
+      "title": "Parent Page",
+      "$ref": "reference",
+      "format": "selectlist"
+    },
+    "requireClaims": {
+      "title": "Required Claims",
+      "type": "array",
+      "items": {
+        "$ref" : "reference"
+      },
+      "format": "checklist",
+      "uniqueItems": true
+    },
+    "stylesheets": {
+      "title": "Stylesheets",
+      "type": "array",
+      "items": {
+        "$ref" : "reference"
+      },
+      "format": "checklist",
+      "uniqueItems": true
+    },
+    "tags": {
+      "$ref" : "tags"
+    }
+  },
+  "required": [ "name", "slug", "parent" ]
+}

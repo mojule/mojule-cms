@@ -1,0 +1,18 @@
+{
+  "title": "List",
+  "id": "list",
+  "type": "object",
+  "properties": {
+    "items": {
+      "title": "Items",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "Item",
+        "minLength": 1
+      },
+      "minItems": 2
+    }
+  },
+  "required": [ "items" ]
+}

@@ -1,0 +1,14 @@
+{{#yield-headStyles}}<link rel="stylesheet" href="css/foundation.css" />{{/yield-headStyles}}
+{{#yield-headScripts}}<script src="js/modernizr.js"></script>{{/yield-headScripts}}
+
+<h1>{{title}}</h1>
+{{> user-emails }}
+
+{{#yield-scripts}}
+  <script src="js/jquery-2.1.4.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/ICanHaz.min.js"></script>
+  <script>
+    $( document ).foundation();
+  </script>
+{{/yield-scripts}}

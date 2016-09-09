@@ -1,0 +1,326 @@
+.page [data-component] {
+  outline: 2px ridge rgba( 255, 255, 255, 0.33 );
+}
+
+.page [data-component].selected {
+  outline: 2px ridge #39f;
+}
+
+.page [data-container] {
+  min-height: 66px;
+  padding: 0.25rem;
+}
+
+[data-type="document"].page [data-component][data-locked="true"] {
+  outline: none;
+}
+
+[data-type="document"].page [data-leaf="true"][data-locked="true"] {
+  opacity: 0.5;
+}
+
+[data-type="document"].page [data-container][data-locked="true"] {
+  min-height: 0;
+  padding: 0;
+}
+
+[data-type="document"].page [data-component] > header[data-locked][data-header] {
+  display: none;
+}
+
+[data-component].collapsed > *:not( [data-header] ){
+  display: none;
+}
+
+[data-component] > [data-header] {
+  display: block;
+  background: #999;
+  color: #fff;
+  padding: 0.25em;
+  cursor: pointer;
+}
+
+[data-component] > [data-header][data-locked] {
+  background: #eee;
+  color: #444;
+}
+
+[data-component] > [data-header] [data-title] {
+  font-size: 70%;
+}
+
+[data-component]:not( [data-immovable="true"] ) > [data-header] {
+  cursor: move;
+  cursor: grab;
+}
+
+[data-type="template"] [data-component] > [data-header].selected,
+[data-component] > [data-header].selected {
+  background: #39f;
+}
+
+[data-action]{
+  cursor: pointer;
+}
+
+[data-action="delete"] {
+  color: #fff;
+  background: red;
+}
+
+[data-action="toggle"][data-state="up"] > [data-key="up"],
+[data-action="toggle"][data-state="down"] > [data-key="down"] {
+  display: inline;
+}
+
+[data-action="toggle"][data-state="up"] > [data-key="down"],
+[data-action="toggle"][data-state="down"] > [data-key="up"] {
+  display: none;
+}
+
+[data-code][contenteditable="true"]{
+  font-family: Monospace;
+  padding: 1em;
+}
+
+body > header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+body > main {
+  background: #fbfbfb;
+}
+
+#composer-viewport {
+  display: block;
+  margin: auto;
+  border: 0;
+}
+
+.page {
+  background: #fff;
+  margin-top: 44px;
+  margin-bottom: 132px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dragging .preview {
+  opacity: 0.5;
+}
+
+.dragging {
+  cursor: move;
+  cursor: grabbing;
+}
+
+/**/
+
+[data-toolbars]{
+  background: #fff;
+  color: #444;
+  border-top: 1px solid #eee;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+[data-toolbar-tab-headers] {
+  background: #eee;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[data-toolbar-tab-headers] li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+[data-toolbar-tab-headers] li > a {
+  background: #ddd;
+  color: #000;
+  border: 1px solid #ddd;
+  border-bottom: 0;
+  display: inline-block;
+  font-size: 90%;
+  margin-left: 0.5em;
+  padding: 0.25em 0.5em;
+  position: relative;
+  top: 1px;
+}
+
+[data-toolbar-tab-headers] li > a.selected {
+  background: #fff;
+}
+
+[data-toolbar-tab-headers] li > a.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+[data-toolbar-tab] {
+  display: none;
+  border: 1px solid #ddd;
+  padding: 0.25em;
+  min-width: 100%;
+}
+
+[data-toolbar-tab].selected {
+  display: inline-block;
+}
+
+
+[data-type="select-single"] li, [data-type="select-multiple"] li, [data-type="button"] li {
+  cursor: pointer;
+}
+
+[data-type="drag"] li {
+  cursor: move;
+  cursor: grab;
+  position: relative;
+}
+
+[data-toolbar-group]{
+  border: 1px solid #eee;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.25em;
+}
+
+[data-toolbar-group] > h2 {
+  font-size: 90%;
+  margin: 0;
+}
+
+[data-key="tabs"] > .tabs-content > .content {
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+}
+
+.menu li {
+  background: #f6f6f6;
+  display: inline-block;
+  text-align: center;
+  padding: 0.25em;
+  margin: 0.25em;
+}
+
+.menu li i {
+  display: inline-block;
+  color: #444;
+}
+
+.menu li .preview {
+  display: inline-block;
+  width: 72px;
+  height: 46px;
+  background: #fff;
+  border: 1px solid #eee;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li .preview > * {
+  display: inline-block;
+  line-height: 46px;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li input {
+  width: 72px;
+}
+
+.menu li small {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.drag-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1.75em 0.125em;
+  background: #eee;
+  color: #999 !important;
+}
+
+.menu li.selected {
+  background: #39f;
+  color: #fff;
+}
+
+.menu li.selected i {
+  color: #ddd;
+}
+
+.menu li:not( .selected ):hover {
+  background: rgba( 51, 153, 255, 0.5 );
+}
+
+.menu li:not( .selected ):hover .drag-icon {
+  background: rgba( 51, 153, 255, 0.5 );
+  color: #39f !important;
+}
+
+.column, .columns{
+  min-height: 1px;
+}
+
+.library li {
+  cursor: pointer;
+}
+
+.library li > * {
+  border: 1px solid #eee;
+}
+
+.library li.selected > * {
+  border: 1px solid #39f;
+  background: #39f;
+  color: #fff;
+}
+
+.reveal-modal.full {
+  overflow-y: scroll;
+}
+
+[data-toolbars] .switch label {
+  margin-bottom: -0.75rem;
+}
+
+[data-restricted="true"] > [data-header] {
+  display: none;
+}
+
+/*
+  Element styles - should be in a default user css?
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.page img {
+  width: 100%;
+  height: auto;
+}

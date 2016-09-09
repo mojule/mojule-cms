@@ -1,0 +1,22 @@
+<form class="modelForm" id="{{name}}" action="{{action}}" method="{{#method}}{{method}}{{/method}}{{^method}}post{{/method}}"{{#multipart}} enctype="multipart/form-data"{{/multipart}}>
+  <fieldset>
+    {{#title}}<legend>{{title}}</legend>{{/title}}
+
+    {{#fields}}
+      {{#array}}
+        {{> modelArrayField}}
+      {{/array}}
+      {{^array}}
+        {{> modelInputs }}
+      {{/array}}
+    {{/fields}}
+
+    {{#captcha}}
+      <div class="g-recaptcha" data-sitekey="{{captcha}}" data-size="compact"></div>
+    {{/captcha}}
+
+    {{#submit}}
+      <div><input class="button success" type="submit" {{#submitLabel}}value="{{submitLabel}}"{{/submitLabel}} /></div>
+    {{/submit}}
+  </fieldset>
+</form>

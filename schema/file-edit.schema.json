@@ -1,0 +1,16 @@
+{
+  "title": "Edit File",
+  "id": "file",
+  "type": "object",
+  "properties": {
+    "file": {
+      "title": "Change File",
+      "type": "string",
+      "format": "file",
+      "minLength": 1
+    },
+    "tags": {
+      "$ref" : "tags"
+    }
+  }
+}

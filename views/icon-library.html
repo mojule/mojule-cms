@@ -1,0 +1,7 @@
+{{#library}}
+  <ul class="small-block-grid-2 medium-block-grid-{{#size}}{{size}} {{/size}}{{^size}}6 {{/size}} library icon-library{{#small}} small-library{{/small}}">
+    {{#items}}
+      <li{{> data-attr}}>{{#url}}<a href="{{url}}" title="{{title}}">{{/url}}<div class="ratio"><div class="content">{{^image}}<i class="fa fa-{{#size}}{{size}}{{/size}}{{^size}}5{{/size}}x fa-{{icon}}{{#className}} {{className}}{{/className}}"></i>{{/image}}{{#image}}<img src="{{image}}" alt="{{alt}}" data-ratio="{{ratio}}" />{{/image}}<span>{{title}}</span></div></div>{{#url}}</a>{{/url}}</li>
+    {{/items}}
+  </ul>
+{{/library}}
