@@ -9,6 +9,8 @@ This prototype contains some of what we intend to be in the final product and is
 stable enough that we are using it in production for client sites, but is
 missing many planned features, lacking in niceties in many places etc.
 
+You can see [some screenshots and etc. here](http://mojule.net/) (like the project, the site is WIP)
+
 ## Documentation
 
 We're still lacking much in the way of documentation etc. - this will be coming
