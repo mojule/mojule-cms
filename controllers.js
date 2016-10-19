@@ -4,7 +4,9 @@ const multer = require( 'multer' )
 const utils = require( './src/utils/utils' )
 const claims = require( './src/claims' )
 const SiteApi = require( './src/api/site-api' )
+const CmsApi = require( './src/api/cms-api' )
 const Store = require( './src/db-store' )
+const initCms = require( './src/init-cms' )
 
 /*
   Controller structure:
@@ -105,6 +107,17 @@ module.exports = ( app, passport ) => {
     //claims negates isPublic
     if ( controller.isPublic && Array.isArray( controller.claims ) ) {
       controller.isPublic = false
+    }
+
+    const restoreCms = ( req, res, next ) => {
+      const cmsApi = CmsApi( Store, app.deps, req.session )
+
+      initCms( cmsApi )
+        .then( () => next() )
+        .catch( err => {
+          app.deps.logger.error( err )
+          next()
+        })
     }
 
     const enforceClaims = ( req, res, next ) => {
@@ -227,7 +240,8 @@ module.exports = ( app, passport ) => {
       if ( controller.isPublic ) {
         app.get( controller.route, setCurrentSite, enforceSiteClaims, controller.get )
       } else {
-        app.get( controller.route, enforceLogin, enforceClaims, setCurrentSite, controller.get )
+        // only call restore cms when logged into CMS
+        app.get( controller.route, enforceLogin, enforceClaims, setCurrentSite, restoreCms, controller.get )
       }
     }
 

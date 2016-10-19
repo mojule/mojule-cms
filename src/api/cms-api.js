@@ -87,6 +87,41 @@ const processEntry = ( siteApi, stores, zipfile, entry, reject, logger ) => {
             zipfile.close()
           })
       })
+    } else if ( parsed.base === 'cms.json' ){
+      logger.info( { message: 'Processing cms.json' }, 'restoreSite' )
+
+      readStream.setEncoding( 'utf8' )
+
+      const chunks = []
+
+      readStream.on( 'data', chunk => {
+        chunks.push( chunk )
+      })
+
+      readStream.on( 'end', () => {
+        const cmsJson = chunks.join( '' )
+
+        const cms = JSON.parse( cmsJson )
+
+        const cmsItems = []
+        const siteItems = []
+
+        cms.forEach( item =>
+          item.key === 'site' ? siteItems.push( item ) : cmsItems.push( item )
+        )
+
+        Promise.all( cmsItems.map( item => stores.cms.saveP( item ) ) )
+          .then(
+            () => Promise.all( siteItems.map( item => saveSite( siteApi, stores, item, logger ) ) )
+          )
+          .then( () => {
+            zipfile.readEntry()
+          })
+          .catch( err => {
+            reject( err )
+            zipfile.close()
+          })
+      })
     } else if ( parsed.dir.indexOf( 'data/files' ) === 0 ) {
       fs.exists( parsed.dir, exists => {
         if ( !exists ) {
@@ -175,6 +210,28 @@ const restoreSite = ( siteApi, stores, zipPath, logger ) =>
       logger.info( { message: 'Zip closed' }, 'restoreSite' )
     })
 
+const createFromBackup = ( siteApi, stores, zipPath, logger ) =>
+  openZip( zipPath )
+    .then( zipfile => {
+      logger.info( { message: 'Opened zip at ' + zipPath }, 'restoreSite' )
+
+      return zipfile
+    })
+    .then( zipfile => new Promise(
+      ( resolve, reject ) => {
+        zipfile.on( 'entry', entry => {
+          processEntry( siteApi, stores, zipfile, entry, reject, logger )
+        })
+        zipfile.on( 'close', () => {
+          resolve()
+        })
+        zipfile.readEntry()
+      }
+    ))
+    .then( () => {
+      logger.info( { message: 'Zip closed' }, 'restoreSite' )
+    })
+
 const CmsApi = ( Store, deps, session ) => {
   const cmsStore = deps.stores.cms
   const siteApi = require( './site-api' )( Store, deps, session )
@@ -182,6 +239,7 @@ const CmsApi = ( Store, deps, session ) => {
 
   const api = {
     backup: () => backup( siteApi, deps.stores ),
+    createFromBackup: zipPath => createFromBackup( siteApi, deps.stores, zipPath, logger ),
     restoreSite: zipPath => restoreSite( siteApi, deps.stores, zipPath, logger )
   }
 
