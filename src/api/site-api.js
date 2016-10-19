@@ -291,10 +291,7 @@ const getSite = ( store, logger, user, currentUrl ) => {
           }
         )
 
-        if( site ){
-          logger.info( { message: { hostname, site } }, 'siteApi.getSite matched URL' )
-          return Promise.resolve( site )
-        } else if( user && user.currentSite ) {
+        if( user && user.currentSite ) {
           return store.loadP( user.currentSite )
             .then(
               site => {
@@ -303,6 +300,9 @@ const getSite = ( store, logger, user, currentUrl ) => {
                 return site
               }
             )
+        } else if( site ){
+          logger.info( { message: { hostname, site } }, 'siteApi.getSite matched URL' )
+          return Promise.resolve( site )
         } else if( sites.length > 0 ) {
           logger.info( { message: { hostname, site: sites[ 0 ] } }, 'siteApi.getSite defaulting to first site' )
 

@@ -27,7 +27,6 @@ module.exports = ( app, passport ) => {
           if ( site ) {
             req.user.currentSite = site._id
             req.session.currentSite = site
-            req.session.save()
           } else {
             const status = utils.httpStatus._404NotFound
             res.status( status.code )
