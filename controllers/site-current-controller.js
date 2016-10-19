@@ -12,6 +12,7 @@ module.exports = ( app, passport ) => {
 
     get: ( req, res ) => {
       const id = req.params.id;
+
       if ( !utils.isDbIdentifier( id ) ) {
         const status = utils.httpStatus._400BadRequest
         res.status( status.code )
@@ -26,6 +27,7 @@ module.exports = ( app, passport ) => {
           if ( site ) {
             req.user.currentSite = site._id
             req.session.currentSite = site
+            req.session.save()
           } else {
             const status = utils.httpStatus._404NotFound
             res.status( status.code )
