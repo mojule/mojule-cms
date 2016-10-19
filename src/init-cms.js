@@ -1,7 +1,7 @@
 const fs = require( 'fs' )
 const pify = require( 'pify' )
 
-const restorePath = 'uploads/restoreCms.zip'
+const restorePath = 'uploads/cmsRestore.zip'
 
 const restoreExists = () => new Promise(
   resolve => fs.exists( restorePath, resolve )
