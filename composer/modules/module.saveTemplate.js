@@ -27,7 +27,7 @@ module.exports = {
             var template = api.createNode( 'template' )
 
             template.name = template.values.name = newTitle
-            template.children = [ node.children ]
+            template.children = node.children
 
             Tree( template ).walk( function( node ){
               node.values.isLocked = true
