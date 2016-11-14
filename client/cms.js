@@ -5,6 +5,7 @@ const persistence = require( '../composer/persistence' )
 const formViewModels = require( '../composer/form-view-models' )
 const dialogs = require( '../composer/dialogs' )( $, ich, persistence, formViewModels )
 const composer = require( '../composer/composer' )
+const abstractComposer = require( '../src/abstract-composer' )
 
 require( './polyfills' )
 
@@ -34,4 +35,6 @@ $( function(){
   Array.from( checklists ).forEach( window.mojule.listBuilder )
 
   composer()
+
+  abstractComposer()
 })

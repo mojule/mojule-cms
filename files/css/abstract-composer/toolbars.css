@@ -1,0 +1,99 @@
+[data-toolbar] [data-children],
+[data-toolbar] [data-children] > ul,
+[data-toolbar] [data-children] > ul > li,
+[data-toolbar] [data-view] {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[data-toolbar] [data-view] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-toolbar][data-node="bar"] {
+  border: 1px solid #aaa;
+  padding: 0.5rem;
+}
+
+[data-toolbar] .ratio .viewport small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-toolbar] .ratio .viewport i {
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  right: 0;
+  width: 4rem;
+}
+
+[data-toolbar] [data-node] > [data-view] {
+  margin: 0.25rem;
+}
+
+[data-toolbar] [data-node="group"] > [data-view] {
+  background: #666;
+  color: #fff;
+  cursor: default;
+}
+
+[data-toolbar] [data-node="draggable"] > [data-view] {
+  border: 1px dashed #aaa;
+  color: #333;
+  cursor: move;
+}
+
+[data-toolbar] [data-composer], [data-toolbar] [data-composer] [data-main] {
+  background: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+[data-toolbar] [data-composer] [data-children]:not(.collapsed) > ul:empty {
+  padding: 0;
+}  
+
+[data-toolbar] [data-node="draggable"] > [data-view] > [data-composer] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+}
+
+[data-toolbar] [data-node="draggable"] > [data-view] > [data-composer] > header {
+  display: none;
+}
+
+[data-toolbar] [data-composer] [data-children] {
+  background: none;
+  box-shadow: none;
+}
+
+[data-toolbar] [data-composer] [data-view] {
+  display: none;
+}    
+
+[data-toolbar] [data-composer] [data-children] > header {
+  display: none;
+}    
+
+[data-toolbar] [data-composer] [data-children],
+[data-toolbar] [data-composer] [data-children] > ul,
+[data-toolbar] [data-composer] [data-children] > ul > li {
+  display: block;
+}
+
+[data-toolbar] [data-composer] [data-composer] header {
+  opacity: 0;
+}

@@ -1,0 +1,46 @@
+{
+  "value": {
+    "type": "fragment",
+    "_id": "fragment-e8d0915d6b361cdc45ade8243a925fe3"
+  },
+  "children": [
+    {
+      "value": {
+        "type": "tag",
+        "name": "strong",
+        "attr": {},
+        "_id": "tag-9e19a4a49cb820b3c9de2657d111106e"
+      },
+      "children": []
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "h2",
+        "attr": {
+          "id": "myHeader",
+          "class": "primary-header"
+        },
+        "_id": "h2-fc3ad02e943cb8979ed95f008254e7c4"
+      },
+      "children": [
+        {
+          "value": {
+            "data": "Hello ",
+            "type": "text",
+            "_id": "text-e8430e778578dcb8a5cef17fcfdd9675"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "type": "text",
+            "data": "Chris",
+            "_id": "text-dfdea7742a24d7dccece3f0c6ca8ec80"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

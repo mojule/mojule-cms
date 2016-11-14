@@ -69,6 +69,7 @@ module.exports = ( app, passport ) => {
     'plugin', 'plugin-script',
     'db',
     'log', 'log-clear-all', 'log-view', 'info',
+    'abstract-composer',
     //must be last
     'home'
   ]
