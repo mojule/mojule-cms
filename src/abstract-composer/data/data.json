@@ -1,0 +1,413 @@
+{
+  "value": {
+    "type": "fragment",
+    "_id": "fragment-e8d0915d6b361cdc45ade8243a925fe3"
+  },
+  "children": [
+    {
+      "value": {
+        "type": "tag",
+        "name": "div",
+        "attr": {},
+        "_id": "tag-ac3ad02e943cb8979ed95f008254e7c4"
+      },
+      "children": [] 
+    },    
+    {
+      "value": {
+        "type": "tag",
+        "name": "h2",
+        "attr": {
+          "id": "myHeader",
+          "class": "primary-header"
+        },
+        "_id": "h2-fc3ad02e943cb8979ed95f008254e7c4"
+      },
+      "children": [
+        {
+          "value": {
+            "data": "Hello ",
+            "type": "text",
+            "_id": "text-e8430e778578dcb8a5cef17fcfdd9675"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "type": "text",
+            "data": "Chris",
+            "_id": "text-dfdea7742a24d7dccece3f0c6ca8ec80"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "p",
+        "attr": {},
+        "_id": "p-d53f27b6ec1f9e4373633a30356130ee"
+      },
+      "children": [
+        {
+          "value": {
+            "data": "\r\n    You have just won ",
+            "type": "text",
+            "_id": "text-87084288b59c46be2a01e3899e101cf4"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "type": "text",
+            "data": "10000",
+            "_id": "text-c7db847f63fc071c8acd0f5c33aa3fcc"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "data": " dollars!\r\n  ",
+            "type": "text",
+            "_id": "text-9c1546afae4baa3bde702e1971b51f12"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "data": "\r\n    Well, ",
+        "type": "text",
+        "_id": "text-40c7dd1af5cf94ce70ef34e43317f8fc"
+      },
+      "children": []
+    },
+    {
+      "value": {
+        "type": "text",
+        "data": "6000",
+        "_id": "text-962fcb78430d32d34f554dae920ba851"
+      },
+      "children": []
+    },
+    {
+      "value": {
+        "data": " dollars, after taxes.\r\n  ",
+        "type": "text",
+        "_id": "text-b08752d01603feebaae78cfa6d590cc6"
+      },
+      "children": []
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "p",
+        "attr": {},
+        "_id": "p-96242ed0cb38c364680b8ea5ff2ff95e"
+      },
+      "children": [
+        {
+          "value": {
+            "data": "\r\n      Well, ",
+            "type": "text",
+            "_id": "text-45f8cdd3c717d93cdf5a9d6880391d55"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "type": "text",
+            "data": "6000",
+            "_id": "text-1e461087e71a89a64fb4e2c971ffd546"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "data": " dollars, after taxes.\r\n    ",
+            "type": "text",
+            "_id": "text-9741c34387d1f3e334e7c3d2ed11866f"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "p",
+        "attr": {},
+        "_id": "p-a10cc7aed2e4f3f1ab9e492057a0353d"
+      },
+      "children": [
+        {
+          "value": {
+            "data": "Shown.",
+            "type": "text",
+            "_id": "text-ee265cb638393013adb578706ebd50af"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "ul",
+        "attr": {},
+        "_id": "ul-c5e3b9b4a69c9faa9d81cc92eeae243d"
+      },
+      "children": [
+        {
+          "value": {
+            "type": "tag",
+            "name": "li",
+            "attr": {},
+            "_id": "li-662458af070e9e1f74f6196cf6ab4bb5"
+          },
+          "children": [
+            {
+              "value": {
+                "type": "text",
+                "data": "Chris",
+                "_id": "text-cb059ebbb2b4bf5f7d77283e43c80a0f"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": {
+            "type": "tag",
+            "name": "li",
+            "attr": {},
+            "_id": "li-94d528b298bf19ff76d505e750e77f3b"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "type": "tag",
+            "name": "li",
+            "attr": {},
+            "_id": "li-121e6a03098e88caddfa27a382d29e9b"
+          },
+          "children": [
+            {
+              "value": {
+                "type": "text",
+                "data": "&lt;b>Github&lt;/b>",
+                "_id": "text-7fbed8a03e3aa14c4cdc1db99683b417"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "value": {
+            "type": "tag",
+            "name": "li",
+            "attr": {},
+            "_id": "li-6ba604adc72539e3428efb5aebead807"
+          },
+          "children": [
+            {
+              "value": {
+                "type": "text",
+                "data": "<b>Github</b>",
+                "_id": "text-85a6cb22f563f7b58a22918e041aab49"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "p",
+        "attr": {},
+        "_id": "p-a5245aea1f04e6f31b8266201a484f1c"
+      },
+      "children": [
+        {
+          "value": {
+            "data": "Hi ",
+            "type": "text",
+            "_id": "text-9f6a23590d2667bb854960f85e3e1854"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "type": "text",
+            "data": "John",
+            "_id": "text-c7259569b9812d8a8f2a67a28c4fc829"
+          },
+          "children": []
+        },
+        {
+          "value": {
+            "data": "!",
+            "type": "text",
+            "_id": "text-8b566a8eca649f2ec2dd8900b82a56c8"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "p",
+        "attr": {},
+        "_id": "p-380b860d0bcbba874824e5411da99377"
+      },
+      "children": [
+        {
+          "value": {
+            "data": "No categories!",
+            "type": "text",
+            "_id": "text-84c486fcaf1b65a060d2170a5d844ce3"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "strong",
+        "attr": {},
+        "_id": "strong-8259fdcf5b06202754301ef71904ecb2"
+      },
+      "children": [
+        {
+          "value": {
+            "type": "text",
+            "data": "Jane",
+            "_id": "text-4ab2d06cdfd4535142fc03404c319749"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "strong",
+        "attr": {},
+        "_id": "strong-20d2ce08cd400d0e4acf6c2716c640b5"
+      },
+      "children": [
+        {
+          "value": {
+            "type": "text",
+            "data": "Sue",
+            "_id": "text-40e9d4df86e91deb62abd137cc06c73c"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "tag",
+        "name": "strong",
+        "attr": {},
+        "_id": "strong-4ebe1c5a15319659994fb421a54fe9b2"
+      },
+      "children": [
+        {
+          "value": {
+            "type": "text",
+            "data": "Paula",
+            "_id": "text-ac53cc6fde879916cf3a878dfdb293ae"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "fragment",
+        "_id": "fragment-7abda12768b06ea3500e349be1454e6b"
+      },
+      "children": [
+        {
+          "value": {
+            "type": "tag",
+            "name": "strong",
+            "attr": {},
+            "_id": "strong-ead4f84ca369a0d29404a4354810cb6f"
+          },
+          "children": [
+            {
+              "value": {
+                "type": "text",
+                "data": "Jane",
+                "_id": "text-b2c669e9f74351c85f66ec26367fb6d7"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "fragment",
+        "_id": "fragment-ff06def88708b40f0663d36b89dad995"
+      },
+      "children": [
+        {
+          "value": {
+            "type": "tag",
+            "name": "strong",
+            "attr": {},
+            "_id": "strong-f19c5af1ab01b8e1cdb9b48e80bdd3f4"
+          },
+          "children": [
+            {
+              "value": {
+                "type": "text",
+                "data": "Sue",
+                "_id": "text-f9af163081268a1c1544df1519ed2552"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": {
+        "type": "fragment",
+        "_id": "fragment-19ac9e4f0d551a112620de6ae8c7fd8b"
+      },
+      "children": [
+        {
+          "value": {
+            "type": "tag",
+            "name": "strong",
+            "attr": {},
+            "_id": "strong-4ad9dc243be5a5f385164bfe215ce519"
+          },
+          "children": [
+            {
+              "value": {
+                "type": "text",
+                "data": "Paula",
+                "_id": "text-503ad7be0baf7be836d04f7ad5df805e"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

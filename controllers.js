@@ -71,6 +71,7 @@ module.exports = ( app, passport ) => {
     'plugin', 'plugin-script',
     'db',
     'log', 'log-clear-all', 'log-view', 'info',
+    'abstract-composer', 'image-loader',
     //must be last
     'home'
   ]

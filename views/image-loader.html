@@ -1,0 +1,46 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    border: 1px solid #666;
+    display: block;
+    float: left;
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+</style>
+<ul>{{#images}}<li><img data-src="{{src}}" /></li>{{/images}}</ul>
+<script>
+  const replaceImg = () => {
+    const img = document.querySelector( 'img[data-src]' )
+
+    if( !img ) return
+
+    const src = img.getAttribute( 'data-src' )
+
+    img.onload = () => {
+      img.removeAttribute( 'data-src' )
+      replaceImg()
+    }
+
+    img.setAttribute( 'src', src )
+  }
+
+  replaceImg()
+</script>
