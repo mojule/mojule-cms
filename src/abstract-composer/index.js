@@ -10,7 +10,6 @@ const abstractComposer = () => {
 
   if( !abstractComposerEl ) return
 
-  /*
   const getFileTree = () => {
     const fsData = require( './data/fs-data' )
     const Ftree = require( './file-tree' )
@@ -18,8 +17,8 @@ const abstractComposer = () => {
 
     return tree
   }
-  */
-  
+
+/*
   const getTree = () => {
     const data = require( './data' )
 
@@ -28,9 +27,10 @@ const abstractComposer = () => {
 
     return tree
   }
-  
-  //const tree = getFileTree()
-  const tree = getTree()
+*/
+
+  const tree = getFileTree()
+  //const tree = getTree()
 
   const deps = { dragula, morphdom, document }
 
@@ -52,7 +52,7 @@ const abstractComposer = () => {
     toolbarContainerEl.innerHTML = toolTree.render()
   }
 
-  htmlToolbars()
+  //htmlToolbars()
 }
 
 module.exports = abstractComposer
