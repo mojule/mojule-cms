@@ -32,7 +32,7 @@ const getCacheName = ( siteId, pageId, query, userOptions ) => {
     filename += '_' + queryString
   }
 
-  if( userOptions ){
+  if( userOptions && userOptions.isLoggedIn ){
     filename += '_' + userOptions.id
   }
 
